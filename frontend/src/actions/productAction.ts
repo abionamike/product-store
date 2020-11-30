@@ -15,16 +15,13 @@ export const listProducts = () => async (dispatch: (arg0: { type: string; payloa
   }
 };
 
-export const createProduct = (product: { name: string; price: number; image: string; rating: number; category: string; description: string; }) => async (dispatch: (arg0: { type: string; payload?: any; }) => void, getState: () => { userLogin: { userInfo: any; }; }) => {
+export const createProduct = (product: { name: string; price: number; image: string; rating: number; category: string; description: string; }) => async (dispatch: (arg0: { type: string; payload?: any; }) => void) => {
   try {
     dispatch({ type: constants.PRODUCT_CREATE_REQUEST });
-
-    const { userLogin: { userInfo } } = getState();
 
     const config = {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${userInfo.token}`,
       },
     };
 

@@ -29,20 +29,16 @@ const getProductById = async (req: any, res: any) => {
 // @access private
 const createproduct = async (req: any, res: any) => {
   try {
-    if (req.user.isAdmin) {
-      const {
-        name, price, category, image, rating, description,
-      } = req.body;
+    const {
+      name, price, category, image, rating, description,
+    } = req.body;
 
-      const product = new Product({
-        name, price, user: req.user._id, image, category, rating, description,
-      });
+    const product = new Product({
+      name, price, user: req.user._id, image, category, rating, description,
+    });
 
-      const createdProduct = await product.save();
-      res.json(createdProduct);
-    } else {
-      res.status(401).json({ error: 'Unauthorized, token failed' });
-    }
+    const createdProduct = await product.save();
+    res.json(createdProduct);
   } catch (error) {
     res.status(401).json({ error: error.message });
   }

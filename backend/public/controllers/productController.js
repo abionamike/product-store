@@ -37,17 +37,12 @@ const getProductById = (req, res) => __awaiter(void 0, void 0, void 0, function*
 // @access private
 const createproduct = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        if (req.user.isAdmin) {
-            const { name, price, category, image, rating, description, } = req.body;
-            const product = new Product({
-                name, price, user: req.user._id, image, category, rating, description,
-            });
-            const createdProduct = yield product.save();
-            res.json(createdProduct);
-        }
-        else {
-            res.status(401).json({ error: 'Unauthorized, token failed' });
-        }
+        const { name, price, category, image, rating, description, } = req.body;
+        const product = new Product({
+            name, price, user: req.user._id, image, category, rating, description,
+        });
+        const createdProduct = yield product.save();
+        res.json(createdProduct);
     }
     catch (error) {
         res.status(401).json({ error: error.message });
