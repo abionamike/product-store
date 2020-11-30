@@ -29,6 +29,9 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'no-nested-ternary': 'off',
     'max-len': 'off',
+    'no-trailing-spaces': 'off',
+    'comma-dangle': 'off',
+    'object-curly-newline': 'off',
     radix: 'off',
   },
 };

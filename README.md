@@ -2,7 +2,7 @@
 
 > eCommerce product store built with the MERN stack & Redux with typeScript.
 
-![screenshot](https://gitlab.com/abionamike/product_store_mern/-/blob/master/upload/screenshot.png)
+![screenshot](https://gitlab.com/abionamike/firegram/-/blob/master/upload/screenshot.png)
 
 ## Features
 
@@ -43,10 +43,12 @@ npm install
 cd frontend/
 run: npm start
 
+# upon start, the jsx in the tsconfig.json in the frontend may change from 'react' to 'react-jsx', please change it back to react.
+
 # Run backend only
 npm run server
 
-#convert typescript files to javascript
+#convert typescript files to javascript in the backend
 run: npm run build
 
 ```
