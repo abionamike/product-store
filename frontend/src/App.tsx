@@ -3,7 +3,7 @@
 /* eslint-disable import/no-unresolved */
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import ProductCreatePage from './pages/ProductCreatePage';
@@ -29,7 +29,7 @@ const App = () => (
       <Route path="/login" component={SignInPage} />
       <Route path="/register" component={RegisterPage} />
     </Switch>
-    {/* <Footer /> */}
+    <Footer />
   </Router>
 );
 

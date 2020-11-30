@@ -5,7 +5,7 @@ import axios from 'axios';
 import { Form, Button, Card } from 'react-bootstrap';
 import FormContainer from '../components/FormContainer';
 import Loader from '../components/Loader';
-import { createProduct } from '../actions/productAction';
+import { createProduct, listProducts } from '../actions/productAction';
 
 // eslint-disable-next-line react/prop-types
 const ProductCreatePage = ({ history }: any) => {
@@ -49,6 +49,7 @@ const ProductCreatePage = ({ history }: any) => {
     }));
     // eslint-disable-next-line react/prop-types
     history.push('/');
+    dispatch(listProducts());
   };
 
   return (

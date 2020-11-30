@@ -59,7 +59,7 @@ run: npm run build
 mike@gmail.com (Admin)
 123456
 
-chris@gmail.com
+dan@gmail.com
 123456
 ```
 

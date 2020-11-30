@@ -8,5 +8,5 @@ router.get('/', getProducts);
 router.get('/:id', getProductById);
 router.put('/:id', protect, upload.single('image'), updateProduct);
 router.delete('/:id', deleteProduct);
-router.post('/', protect, upload.single('image'), createproduct);
+router.post('/', upload.single('image'), createproduct);
 export default router;
